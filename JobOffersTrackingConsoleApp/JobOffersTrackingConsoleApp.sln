@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobOffersTrackingConsoleApp", "JobOffersTrackingConsoleApp\JobOffersTrackingConsoleApp.csproj", "{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOTCA.Database", "JOTCA.Database\JOTCA.Database.csproj", "{FBCFAA37-976A-4C57-A9CB-398197B98119}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31AE5C07-3472-421D-8838-9E241E2D2139}
+	EndGlobalSection
+EndGlobal
