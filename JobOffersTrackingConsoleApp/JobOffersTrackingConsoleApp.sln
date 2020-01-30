@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobOffersTrackingConsoleApp", "JobOffersTrackingConsoleApp\JobOffersTrackingConsoleApp.csproj", "{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobOffersTrackingConsoleApp", "JobOffersTrackingConsoleApp\JobOffersTrackingConsoleApp.csproj", "{C87D05FD-A3DF-427F-ADD0-A63E6904FA71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOTCA.Database", "JOTCA.Database\JOTCA.Database.csproj", "{FBCFAA37-976A-4C57-A9CB-398197B98119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JOTCA.Database", "JOTCA.Database\JOTCA.Database.csproj", "{FBCFAA37-976A-4C57-A9CB-398197B98119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOTCA.BusinessLayer", "JOTCA.BusinessLayer\JOTCA.BusinessLayer.csproj", "{DA18863C-87A0-4B64-B9D5-9C3C865DCC66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBCFAA37-976A-4C57-A9CB-398197B98119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA18863C-87A0-4B64-B9D5-9C3C865DCC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA18863C-87A0-4B64-B9D5-9C3C865DCC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA18863C-87A0-4B64-B9D5-9C3C865DCC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA18863C-87A0-4B64-B9D5-9C3C865DCC66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
