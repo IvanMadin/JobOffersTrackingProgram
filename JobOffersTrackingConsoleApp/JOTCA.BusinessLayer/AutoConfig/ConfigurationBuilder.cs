@@ -4,6 +4,8 @@ using JOTCA.BusinessLayer.Commands.Abstraction;
 using JOTCA.BusinessLayer.Providers;
 using JOTCA.BusinessLayer.Services;
 using JOTCA.Database;
+using System.Linq;
+using System.Reflection;
 
 namespace JOTCA.BusinessLayer.AutoConfig
 {
@@ -20,9 +22,22 @@ namespace JOTCA.BusinessLayer.AutoConfig
             container.RegisterType<CompaniesService>().AsSelf();
             container.RegisterType<RWConsoleHelper>().AsSelf();
 
-            container.RegisterType<AddCommand>().Named<ICommand>("add").AsSelf();
+            RegisterCommans(container);
 
             return container.Build();
+        }
+
+        private static void RegisterCommans(ContainerBuilder container)
+        {
+            var commands = Assembly.GetExecutingAssembly()
+                .DefinedTypes
+                .Where(x => x.ImplementedInterfaces.Contains(typeof(ICommand))).ToList();
+
+            commands.ForEach(
+                command =>
+                container
+                .RegisterType(command.AsType())
+                .Named<ICommand>(command.Name.ToLower().Substring(0, command.Name.Length - 7)));
         }
     }
 }

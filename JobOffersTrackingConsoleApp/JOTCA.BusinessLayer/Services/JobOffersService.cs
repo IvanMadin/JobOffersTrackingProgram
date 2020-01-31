@@ -1,8 +1,9 @@
 ﻿using JOTCA.Database;
 using JOTCA.Database.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace JOTCA.BusinessLayer.Services
 {
@@ -15,12 +16,33 @@ namespace JOTCA.BusinessLayer.Services
             this.context = context;
         }
 
-        public string AddOffer(int companyId, DateTime dateOfsending, string position)
+        public JobOffer AddOffer(int companyId, DateTime dateOfsending, string position, string inputLocation)
         {
-            this.context.JobOffers.Add(new JobOffer { CompanyId = companyId, DateOfSendingEmail = dateOfsending, Position = position });
+
+            bool isValid = Enum.TryParse(inputLocation, true, out CityLocation location);
+
+            if (!isValid)
+            {
+                throw new ArgumentException($"There is no such town like: {inputLocation}");
+            }
+
+            var newOffer = new JobOffer
+            {
+                CompanyId = companyId,
+                DateOfSendingEmail = dateOfsending,
+                Position = position,
+                Location = location
+            };
+
+            this.context.JobOffers.Add(newOffer);
             this.context.SaveChanges();
 
-            return "Succesfully added Offer to DB";
+            return newOffer;
+        }
+
+        public IReadOnlyCollection<JobOffer> GetAllJobOffers()
+        {
+            return this.context.JobOffers.Include(j => j.Company).ToList().AsReadOnly();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace JOTCA.BusinessLayer.Providers
 
         public string InputHelper(string output)
         {
-            Console.Write($"{output}: ");
+            Console.Write($"{output}");
             return Console.ReadLine();
         }
     }

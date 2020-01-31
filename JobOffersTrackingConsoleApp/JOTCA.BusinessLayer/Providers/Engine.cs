@@ -24,20 +24,20 @@ namespace JOTCA.BusinessLayer.Providers
                 string input = Console.ReadLine();
                 if (string.IsNullOrEmpty(input))
                 {
-                    Console.WriteLine(allResults.ToString());
                     break;
                 }
+
                 try
                 {
                     var result = this.commandFactory.InvokeCommand(input).Execute();
-                    allResults.AppendLine(result);
 
+                    Console.WriteLine(result);
                 }
                 catch (ArgumentException ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }

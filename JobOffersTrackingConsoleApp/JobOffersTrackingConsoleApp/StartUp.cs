@@ -18,6 +18,7 @@ namespace JobOffersTrackingConsoleApp
             //Soft2Run: WaitingForReply/29.01.2020
             //grafixoft: WaitingForReply/29.01.2020
             //P&P (M2MServices FullStack .NET Developer): WaitingForInterviewDate/30.1 
+            //SBTech Junior .NET Developer(Betting)/waiting/31.01.2020
         }
     }
 }
