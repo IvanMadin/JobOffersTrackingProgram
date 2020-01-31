@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Autofac;
+﻿using Autofac;
 using JOTCA.BusinessLayer.Commands;
 using JOTCA.BusinessLayer.Commands.Abstraction;
 using JOTCA.BusinessLayer.Providers;
 using JOTCA.BusinessLayer.Services;
 using JOTCA.Database;
 
-namespace JobOffersTrackingConsoleApp.AutoConfig
+namespace JOTCA.BusinessLayer.AutoConfig
 {
     public static class ConfigurationBuilder
     {
@@ -19,7 +17,8 @@ namespace JobOffersTrackingConsoleApp.AutoConfig
             container.RegisterType<CommandFactory>().AsSelf();
             container.RegisterType<Engine>().AsSelf();
             container.RegisterType<JobOffersService>().AsSelf();
-            //container.RegisterType<Service>().AsSelf();
+            container.RegisterType<CompaniesService>().AsSelf();
+            container.RegisterType<RWConsoleHelper>().AsSelf();
 
             container.RegisterType<AddCommand>().Named<ICommand>("add").AsSelf();
 

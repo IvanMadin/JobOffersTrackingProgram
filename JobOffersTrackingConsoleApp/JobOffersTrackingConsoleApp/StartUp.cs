@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using JobOffersTrackingConsoleApp.AutoConfig;
+using JOTCA.BusinessLayer.AutoConfig;
 using JOTCA.BusinessLayer.Providers;
 
 namespace JobOffersTrackingConsoleApp
